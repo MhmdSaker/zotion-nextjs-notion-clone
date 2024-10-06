@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const Heading = () => {
@@ -8,10 +9,10 @@ export const Heading = () => {
           <a href="/">Zotion.</a>
         </h1>
         <h3 className="mb-6">Where Ideas, Places, Stuff meets at one place.</h3>
-        <button className="flex gap-4 bg-slate-950 p-3 text-neutral-50 rounded items-center transition-colors hover:bg-violet-700">
+        <Button variant="destructive" className="flex gap-4 p-3 rounded items-center transition-all">
           Enter Zotion
           <ArrowRight className="size-[23px]"></ArrowRight>
-        </button>
+        </Button>
       </div>
     </div>
   );

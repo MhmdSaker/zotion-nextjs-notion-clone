@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Readex_Pro } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 const readex = Readex_Pro({
   subsets: ["latin"],
@@ -31,8 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${readex.className} antialiased`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${readex.className} antialiased`}>
+        <ThemeProvider storageKey="zotion-theme-2" attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        {children}</ThemeProvider></body>
     </html>
   );
 }
